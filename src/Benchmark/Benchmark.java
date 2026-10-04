@@ -85,7 +85,7 @@ public class Benchmark {
                     a.getMetrics().getMoves(), a.getMetrics().getComparisons());
         }));
 
-        writeRow(out, "W2", "-", "MyLinkedList", n, repeatMedian(() -> {
+        writeRow(out, "W2", "-", "LinkedList", n, repeatMedian(() -> {
             LinkedList l = new LinkedList();
             int[] filled = fill(l, n);
             l.getMetrics().reset();
@@ -119,7 +119,7 @@ public class Benchmark {
                     a.getMetrics().getMoves(), a.getMetrics().getComparisons());
         }));
 
-        writeRow(out, "W3", variant, "MyLinkedList", n, repeatMedian(() -> {
+        writeRow(out, "W3", variant, "LinkedList", n, repeatMedian(() -> {
             LinkedList l = new LinkedList();
             fill(l, n);
             int idx = variant.equals("head") ? 0 : n / 2;
